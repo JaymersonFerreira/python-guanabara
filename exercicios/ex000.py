@@ -10,7 +10,7 @@
 # vogal = str(input('Digite uma letra: ')).lower().split()[0]
 #
 # conferir(vogal)
-
+#aaaaaaaaahh 
 #
 # temperatura = 0
 # while temperatura != 999:
