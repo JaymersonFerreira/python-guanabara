@@ -38,8 +38,13 @@ for c in range(0, tot):
     partidas.append(int(input(f'Gols no {c+1} jogo: ')))
 jogador['gols'] = partidas[:]
 jogador['total'] = sum(partidas)
+print('-=' * 30)
 print(jogador)
+print('-=' * 30)
 for k, v in jogador.items():
-    print(f'Na chave {k} possuo o valor {v}')
+    print(f'    => Na chave {k} possuo o valor {v}')
+print('-=' * 30)
+print(f'O jogador {jogador["nome"]} jogou {len(jogador["gols"])} partidas.')
 for i, j in enumerate(jogador['gols']):
-    print(f'No {i}ª jogo foram feitos {j} gols pelo {jogador["nome"]}')
+    print(f'    => No {i+1}ª jogo foram feitos {j} gols pelo {jogador["nome"]}')
+print(f'Foi um total de {jogador["total"]} gols')
