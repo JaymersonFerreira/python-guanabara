@@ -28,39 +28,22 @@ sabendo que o vencedor tirou o maior número no dado.'''
 # print('== RANKING DOS JOGADORES ==')
 # for i, v in enumerate(ranking): #O enumerate não funciona com dicionario
 #     print(f'{i+1}ª lugar: {v[0]} com {v[1]}')
-  
 
 from random import randint
 from time import sleep
-jogo = {}
 from operator import itemgetter
-while True:
-    pessoa = randint(1, 5)
 
-    if pessoa not in jogo:
-        jogo['co_fa'] = pessoa
-
-    if pessoa not in jogo:
-        jogo['g_conte'] = pessoa
-
-    if pessoa not in jogo:
-        jogo['g_enga'] = pessoa
-
-    if pessoa not in jogo:
-        jogo['colab1'] = pessoa
-
-    if pessoa not in jogo:
-        jogo['colab2'] = pessoa
-    if len(jogo) == 5:
-        break
-    
+jogo = { 'jogador1': randint(1, 6),
+        'jogador2': randint(1,6),
+        'jogador3': randint(1, 6),
+        'jogador4': randint(1, 6)}
 ranking = list()
-print('Valor sorteados:')
+print('Valores sorteados:')
 for k, v in jogo.items():
     print(f'{k} tirou {v} no dado')
     sleep(0.5)
 ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
-print(ranking)
+print('-=' * 15)
 for i, v in enumerate(ranking):
-    print(f'{i+1} lugar: {v[0]} com {v[1]}.')
+    print(f'{i+1}ª lugar: {v[0]} com {v[1]}.')
     sleep(0.5)
