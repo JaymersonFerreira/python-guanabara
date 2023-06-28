@@ -51,26 +51,48 @@ def nomes(valor):
         print(numero5)
 
 
-sorteio = list()
-
-while True:
-    num = randint(1, 5)
-    if num not in sorteio:
-        sorteio.append(num)
+# sorteio = list()
+# while True:
+#     num = randint(1, 5)
+#     if num not in sorteio:
+#         sorteio.append(num)
     
-    if len(sorteio) == 5:
-        break
+#     if len(sorteio) == 5:
+#         break
 
-print(sorteio)
+# print(sorteio)
 
-posicao = dict()
-posicao['co_facilitador']       = sorteio[0] 
-posicao['gestor_conhecimento']  = sorteio[1] 
-posicao['gestor_engajamento']   = sorteio[2] 
-posicao['colaborador 1']        = sorteio[3] 
-posicao['colaborador 2']        = sorteio[4] 
+# posicao = dict()
+# posicao['co_facilitador']       = sorteio[0] 
+# posicao['gestor_conhecimento']  = sorteio[1] 
+# posicao['gestor_engajamento']   = sorteio[2] 
+# posicao['colaborador 1']        = sorteio[3] 
+# posicao['colaborador 2']        = sorteio[4] 
 
-for k, v in posicao.items():
-    print(k,'_', end='')
-    nomes(v)
-    sleep(0, 5)
+# for k, v in posicao.items():
+#     print(k,'_', end='')
+#     nomes(v)
+#     # time.sleep(0, 5)
+
+from random import randint
+from time import sleep
+
+def sorteia(lista):
+    print('Sorteado 5 valores da lista: ', end='')
+    for cont in range(0, 5):
+        n = randint(0, 5)
+        lista.append(n)
+        print(f'{n} ', end='', flush=True)
+        sleep(0,3)
+    print('PRONTO')
+
+def somaPar(lista):
+    soma = 0
+    for valor in lista:
+        if valor % 2 == 0:
+            soma += valor
+    print(f'Somando os valores pares de {lista}, temos {soma}')
+
+numeros = list()
+sorteia(numeros)
+somaPar(numeros)
