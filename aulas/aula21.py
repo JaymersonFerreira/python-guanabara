@@ -100,18 +100,31 @@
 #
 # print(f'Os resultados são {f1}, {f2} e {f3}')
 
-def par(n=0):
-    if n % 2 == 0:
-        return True
-    else:
-        return False
+# def par(n=0):
+#     if n % 2 == 0:
+#         return True
+#     else:
+#         return False
+#
+#
+# num = int(input('Digite um número: '))
+# if par(num):
+#     print('É par!')
+# else:
+#     print('Não é par!')
+# hfhgf
 
 
-num = int(input('Digite um número: '))
-if par(num):
-    print('É par!')
-else:
-    print('Não é par!')
-hfhgf
-
-
+def contador(i, f, p):
+    '''
+    -> Faz uma contagem e mostra na tela
+    :param i: início da contagem
+    :param f: fim da contagem
+    :param p: passo da contagem
+    :return: sem retorno 
+    '''
+    c = i
+    while c <= f:
+        print(f'{c}', end='..')
+        c += p
+    print('Fim!')
